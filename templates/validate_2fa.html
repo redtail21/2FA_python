@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Validate Two-Factor Authentication</h1>
+    <form method="POST" action="{{ url_for('validate_2fa') }}">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.token.label }}<br>
+            {{ form.token(size=32) }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+{% endblock %}

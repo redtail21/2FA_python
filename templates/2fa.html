@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Two-Factor Authentication Setup</h1>
+    <p>Scan the QR code with your 2FA app:</p>
+    <img src="{{ url_for('static', filename=qr_path) }}" alt="2FA QR Code">
+    <a href="{{ url_for('validate_2fa') }}">Proceed to validation</a>
+{% endblock %}
